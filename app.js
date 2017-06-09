@@ -8,12 +8,15 @@ Test this function by hand in the console to get it working, and when you think 
 For TODO item, be sure to change it to say DONE when you have successfully completed the task*/
 
 // TODO: Write your code here
-function sum(a,b){ //eslint-disable-line
+ function sum (a,b) { //eslint-disable-line
+  var sumTotal = a + b; //
+  var sumMsg = ('The sum of ' + a + ' and ' + b + ' is ' + sumTotal + '.');
+  console.log(sumMsg);
+  return [sumTotal , sumMsg];
+};
 
-}
-
-// TODO: Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+// // TODO: Here is the test for sum(); uncomment it to run it
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -86,5 +89,3 @@ function multiplyArray(testArray){ //eslint-disable-line
 // testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help

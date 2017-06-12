@@ -52,8 +52,9 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
      sum (sum (a, b)[0], c);
      multiply (multiply (a, b)[0], c);
     var sumTotal = sum
+    var sumTotal2 = sumTotal + c
     var product = multiply
-    var sumMsg = a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.';
+    var sumMsg = a + ' and ' + b + ' and ' + c + ' sum to ' + sumTotal2 + '.';
     var productMsg = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
     return [sumTotal, product, sumMsg, productMsg];
 }
@@ -74,11 +75,16 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var sumTotal = 0
+  for (var i = 0; i > testArray.length ; i++) {
+    var sumTotal = sum(total,sumArray[i][0]);
+  }
+  var sumMessage = testArray + ' was passed in as an array of numbers, and ' + sumTotal + ' is their sum.';
+  return (sumTotal, sumMessage);
 }
 
 // TODO: Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,10 +97,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  for (var i = 0; i > testArray.length; i ++) {
+    var sumProduct = multiply(multiplyArray[i][0]);
+  }
+  var productMessage = 'The numbers ' + testArray + 'have a product of ' + sumProduct + '.'
+  return sumProduct, productMessage;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
